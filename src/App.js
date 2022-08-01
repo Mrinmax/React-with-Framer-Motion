@@ -1,10 +1,11 @@
 import React from "react";
 import "./App.css";
+import Hero from "./components/Hero";
 
 function App() {
   return (
     <div className="App">
-      <h1>React-Framer-Motion</h1>
+      <Hero />
     </div>
   );
 }
