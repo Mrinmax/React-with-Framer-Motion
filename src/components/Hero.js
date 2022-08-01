@@ -11,6 +11,7 @@ const Hero = () => {
     hidden: { opacity: 0, x: -100 },
     visible: { opacity: 1, x: 0 },
   };
+
   return (
     <Section>
       <Container>
@@ -45,10 +46,38 @@ const Hero = () => {
           </Button>
         </ColumnLeft>
         <ColumnRight>
-          <Image src={PlanetOne} alt="planet" />
-          <Image src={PlanetTwo} alt="planet-2" />
-          <Image src={PlanetThree} alt="planet-3" />
-          <Image src={PlanetFour} alt="planet-4" />
+          <Image
+            src={PlanetOne}
+            alt="planet"
+            whileTap={{ scale: 0.9 }}
+            drag={true}
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 1, transition: { duration: 1 } }}
+          />
+          <Image
+            src={PlanetTwo}
+            alt="planet-2"
+            whileTap={{ scale: 0.9 }}
+            drag={true}
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 1, transition: { duration: 1 } }}
+          />
+          <Image
+            src={PlanetThree}
+            alt="planet-3"
+            whileTap={{ scale: 0.9 }}
+            drag={true}
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 1, transition: { duration: 1 } }}
+          />
+          <Image
+            src={PlanetFour}
+            alt="planet-4"
+            whileTap={{ scale: 0.9 }}
+            drag={true}
+            initial={{ opacity: 1 }}
+            animate={{ opacity: 1, transition: { duration: 1 } }}
+          />
         </ColumnRight>
       </Container>
     </Section>
@@ -63,6 +92,8 @@ const Section = styled.section`
   justify-content: center;
   align-items: center;
   background: #131313;
+  display: scroll;
+  overflow: hidden;
 `;
 const Container = styled.div`
   display: grid;
@@ -105,7 +136,7 @@ const Button = styled(motion.button)`
   color: #fff;
 `;
 
-const Image = styled.img`
+const Image = styled(motion.img)`
   position: absolute;
   width: 100%;
   height: 100%;
